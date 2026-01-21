@@ -59,7 +59,7 @@ The web interface displays:
 
 ### For End Users
 
-👉 **[Installation Guide](INSTALLATION.md)** - Download and install KLA Dock
+👉 **[Installation Guide](installation.md)** - Download and install KLA Dock
 
 The installation process is simple:
 1. Download the installer
@@ -68,7 +68,7 @@ The installation process is simple:
 
 ### For Developers
 
-👉 **[Development Guide](DEVELOPMENT.md)** - Set up your dev environment and build from source
+👉 **[Development Guide](development.md)** - Set up your dev environment and build from source
 
 Work on KLA Dock itself:
 - Set up Python environment
@@ -126,5 +126,5 @@ Internal tool for KLA use.
 ---
 
 <p align="center">
-  <strong>Need help?</strong> Check the <a href="INSTALLATION.md">Installation Guide</a> or <a href="DEVELOPMENT.md">Development Guide</a>
+  <strong>Need help?</strong> Check the <a href="installation.md">Installation Guide</a> or <a href="development.md">Development Guide</a>
 </p>
