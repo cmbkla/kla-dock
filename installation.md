@@ -15,6 +15,8 @@ Before installing KLA Dock, ensure you have:
 3. **Docker CLI** installed on Windows
 4. Docker CLI configured to connect to your WSL Docker daemon
 
+See these instructions for getting Docker set up on WSL: https://kunzleigh.atlassian.net/wiki/spaces/KLAD/pages/5418516515/Docker+Installation+with+WSL+and+no+Docker+Desktop
+
 ### Verify Your Setup
 
 Open a Windows command prompt or Git Bash and run:
@@ -251,5 +253,6 @@ If you encounter issues:
 - **Check system tray tooltip** - Quick status without opening the web interface
 
 ---
+
 
 **Ready to get started?** Install KLA Dock and enjoy seamless Docker management on Windows!
