@@ -3,12 +3,18 @@ WSL management for KLA Dock
 """
 
 import subprocess
+import platform
 from python.config import WSL_DISTRO
 from python import state
 
 
 def keep_wsl_alive():
-    """Keep WSL running in the background"""
+    """Keep WSL running in the background (Windows only)"""
+    # Skip on non-Windows platforms
+    if platform.system() != "Windows":
+        print("Skipping WSL keepalive (not running on Windows)")
+        return
+
     try:
         # Start a persistent process in WSL
         state.wsl_process = subprocess.Popen(
