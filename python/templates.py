@@ -1393,6 +1393,9 @@ HTML_TEMPLATE = '''
         let currentSelectedRepo = null; // Track which repo is selected
         
         function renderACR(acrStatus) {
+            // Track previous auth state
+            const wasAuthenticated = acrData.authenticated;
+            
             // Update status
             const statusEl = document.getElementById('acr-status');
             const statusTextEl = document.getElementById('acr-status-text');
@@ -1429,6 +1432,15 @@ HTML_TEMPLATE = '''
                 }
                 
                 acrInitialized = true;
+            } else if (!wasAuthenticated && acrStatus.authenticated) {
+                // Auth status just changed from false to true - reload saved repo
+                populateRepositoryDropdown();
+                const savedRepo = getSavedRepository();
+                if (savedRepo && acrData.repositories.includes(savedRepo)) {
+                    acrData.selectedRepo = savedRepo;
+                    currentSelectedRepo = savedRepo;
+                    loadRepositoryTags(savedRepo);
+                }
             } else if (currentSelectedRepo && acrData.tags.length > 0) {
                 // Re-render tags to update pull button states
                 renderTags(currentSelectedRepo, acrData.tags);
@@ -1492,6 +1504,9 @@ HTML_TEMPLATE = '''
             document.getElementById('acr-selected-repo').style.display = 'none';
             acrData.selectedRepo = null;
             currentSelectedRepo = null;
+            
+            // Clear tags immediately to avoid showing stale data
+            acrData.tags = [];
         }
         
         async function loadRepositoryTags(repoName) {
