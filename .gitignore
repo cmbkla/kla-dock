@@ -1,0 +1,30 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist-info/
+.Python
+env/
+venv/
+
+# PyInstaller
+build/
+*.spec
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# User data
+.kla-dock-pulls.json

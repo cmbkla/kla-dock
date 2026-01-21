@@ -104,12 +104,23 @@ def check_inno_setup():
     if platform.system() != "Windows":
         return False
 
+    # Get user's AppData path
+    import os
+    appdata_local = os.environ.get('LOCALAPPDATA', '')
+
     possible_paths = [
+        # Program Files locations
         r"C:\Program Files (x86)\Inno Setup 6\ISCC.exe",
         r"C:\Program Files\Inno Setup 6\ISCC.exe",
         r"C:\Program Files (x86)\Inno Setup 5\ISCC.exe",
         r"C:\Program Files\Inno Setup 5\ISCC.exe",
+        # AppData Local locations (user install)
+        os.path.join(appdata_local, r"Programs\Inno Setup 6\ISCC.exe") if appdata_local else None,
+        os.path.join(appdata_local, r"Programs\Inno Setup 5\ISCC.exe") if appdata_local else None,
     ]
+
+    # Filter out None values
+    possible_paths = [p for p in possible_paths if p]
 
     for path in possible_paths:
         if Path(path).exists():
@@ -147,6 +158,7 @@ def build_installer():
         print("\nLooking for ISCC.exe in:")
         print("  C:\\Program Files (x86)\\Inno Setup 6\\")
         print("  C:\\Program Files\\Inno Setup 6\\")
+        print("  %LOCALAPPDATA%\\Programs\\Inno Setup 6\\")
         return False
 
     # Check if installer script exists
