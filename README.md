@@ -26,6 +26,8 @@ Automatically keeps your WSL instance running in the background without needing 
 - Live status showing running containers
 - One-click access to management interface
 
+<img width="274" height="179" alt="image" src="https://github.com/user-attachments/assets/5b1641ef-65ce-4824-8cec-b3b437d38792" />
+
 ### 🌐 **Modern Web Interface**
 Clean, dark-themed dashboard at `http://127.0.0.1:54729` featuring:
 - Real-time container statistics (CPU, memory, network I/O)
@@ -33,6 +35,8 @@ Clean, dark-themed dashboard at `http://127.0.0.1:54729` featuring:
 - Image management and cleanup
 - Auto-refreshing every 5 seconds
 - Responsive, developer-friendly design
+
+<img width="1141" height="1210" alt="image" src="https://github.com/user-attachments/assets/4068c069-e725-458d-a824-b499c673ef9f" />
 
 ### 🔔 **Smart Notifications**
 Get notified when container states change with native Windows notifications.
