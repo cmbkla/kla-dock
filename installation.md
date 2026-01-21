@@ -2,7 +2,7 @@
 
 This guide is for **end users** who want to install and use KLA Dock to manage Docker containers.
 
-> **Are you a developer working on KLA Dock itself?** See the [Development Guide](DEVELOPMENT.md) instead.
+> **Are you a developer working on KLA Dock itself?** See the [Development Guide](development.md) instead.
 
 ---
 

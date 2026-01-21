@@ -103,15 +103,13 @@ Work on KLA Dock itself:
 If you're running Docker in WSL on Windows, you've probably experienced:
 - ❌ WSL shutting down when you close your terminal
 - ❌ Having to keep a terminal window open just to keep WSL alive
-- ❌ Switching between terminal and Docker Desktop
-- ❌ Slow, heavy Docker Desktop consuming resources
+- ❌ Having to remember CLI commands to see status or do basic tasks
 
 **KLA Dock solves all of this:**
 - ✅ WSL stays running automatically in the background
 - ✅ Clean, fast web interface
 - ✅ Lightweight system tray app
 - ✅ Native Windows notifications
-- ✅ No bloated Docker Desktop needed
 
 ## 🏢 About
 
