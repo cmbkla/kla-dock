@@ -1,0 +1,5 @@
+Flask==3.0.0
+Pillow==10.1.0
+pystray==0.19.5
+win11toast==0.34
+pyinstaller==6.3.0
